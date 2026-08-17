@@ -1,5 +1,5 @@
-hi
-Intuition
+
+**Intuition**
 The goal is to find the smallest contiguous subarray whose sum is greater than or equal to target.
 
 A brute-force approach would check every possible subarray, but that would take O(n²) time.
@@ -15,8 +15,7 @@ Keep updating the minimum length while the window is still valid.
 When the sum becomes smaller than target, expand the window again using high.
 Because all numbers are positive, removing an element from the left will always decrease the sum. This makes the sliding window approach possible.
 
-Approach
-Approach
+**Approach**
 Initialize low = 0, sum = 0, and ans = Integer.MAX_VALUE.
 
 Use high to traverse the array and add nums[high] to sum.
@@ -35,12 +34,12 @@ Continue shrinking while sum >= target to find the smallest valid window.
 
 If no valid subarray is found, return 0; otherwise, return ans.
 
-Complexity
+**Complexity**
 Time complexity: O(n)
 
 Space complexity: O(1)
 
-Code
+**Code**
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
         int low=0;
