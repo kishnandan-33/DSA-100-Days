@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.List;
 class Solution {
     int[][] dp = new int[202][202];
 
@@ -12,7 +14,11 @@ class Solution {
         int diagonal = fun(i + 1, j + 1, triangle);
         return dp[i][j] = triangle.get(i).get(j) + Math.min(down, diagonal);
     }
+
     public int minimumTotal(List<List<Integer>> triangle) {
+        if (triangle == null || triangle.isEmpty()) {
+            return 0;
+        }
         for (int i = 0; i < 202; i++) {
             Arrays.fill(dp[i], Integer.MAX_VALUE);
         }
