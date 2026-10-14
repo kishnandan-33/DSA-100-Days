@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public int dominantIndices(int[] nums) {
         int ans = 0;
