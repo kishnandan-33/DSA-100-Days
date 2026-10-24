@@ -1,4 +1,3 @@
-import java.util.*;
 class Solution {
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
